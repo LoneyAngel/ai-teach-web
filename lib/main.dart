@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';//字体
+import 'package:untitled1/pages/Questionpage.dart';
 
 
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     '/tabview/Settingpage': (context) => Settingpage(),
     '/tabview/Resourcepage': (context) => Resourcepage(),
     '/Startpage': (context) => Startpage(),
+    // '/Startpage/Questionpage': (context) => Questionpage(),
   };
   @override
   Widget build(BuildContext context) {

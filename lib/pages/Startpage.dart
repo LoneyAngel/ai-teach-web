@@ -211,7 +211,7 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
       if (response.statusCode == 200) {
         var responseBody = jsonDecode(response.body);
         setState(() {
-          _response = responseBody['message'] ?? 'No response';
+          _response = responseBody['data'] ?? 'No response';
         });
       } else {
         setState(() {
@@ -234,6 +234,7 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
             // 当用户按下Enter键时执行的操作
             print('User submitted: $value');
             _response=_sendRequest().toString();
+
           },
           focusNode: _focusNode,
           controller: _controller, // 控制器，用于管理输入框内容

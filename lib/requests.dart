@@ -3,8 +3,9 @@ import 'dart:convert';
 
 
 
-
-//获取到python的后端返回的信息
+/*
+* 提问加上返回信息
+* */
 Future<String> getHello() async {
   final response = await http.get(Uri.parse('http://localhost:5000/hello'));
   if (response.statusCode == 200) {
