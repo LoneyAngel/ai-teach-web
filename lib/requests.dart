@@ -1,11 +1,17 @@
+/*
+*   在这里进行一些信息获取的与后端的交互
+* 的操作，即类似于js的操作步骤,示例
+* */
+
+
+
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 
 
-/*
-* 提问加上返回信息
-* */
+//提问加上返回信息
 Future<String> getHello() async {
   final response = await http.get(Uri.parse('http://localhost:5000/hello'));
   if (response.statusCode == 200) {
@@ -34,11 +40,6 @@ Future<void> sendData() async {
   } else {
     print('Request failed with status: ${response.statusCode}.');
   }
-}
-
-void main() {
-  getHello();
-  sendData();
 }
 
 

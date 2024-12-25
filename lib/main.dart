@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';//字体
-import 'package:untitled1/pages/Questionpage.dart';
 
 
-
-//页面的导入
+//页面
 import 'package:untitled1/pages/tabview/Settingpage.dart';
 import 'package:untitled1/pages/tabview/Resourcepage.dart';
-import 'package:untitled1/pages/Startpage.dart';
+import 'package:untitled1/pages/zhuye/Startpage.dart';
 
 
 void main() {
@@ -28,9 +26,14 @@ class MyApp extends StatelessWidget {
       //设置全局的样式
       theme: ThemeData(
         useMaterial3: true,
+
+        // //统一的设置padding的样式
+        // inputDecorationTheme: InputDecorationTheme(
+        //   contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        // ),
         // Define the default brightness and colors.
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.purple,
+          seedColor: Colors.blueAccent.shade100,
           brightness: Brightness.light    //该变主题的样式，Brightness.dark,
         ),
 

@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'AI',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: ChatScreen(),
-    );
-  }
-}
 
-class ChatScreen extends StatefulWidget {
+
+/**
+ * 1.调整页面的结构，搜索框沿用之前的那个
+ * 2.调整聊天的逻辑
+ * 3.完成和ai的交互
+ * 4.初步使用数据库进行数据的存放
+ * 5.完善ai的能力
+ * */
+
+
+class Connectpage extends StatefulWidget {
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _ChatScreenState extends State<Connectpage> {
   final List<Message> _messages = [];
   final TextEditingController _textController = TextEditingController();
   bool _isComposing = false;
@@ -50,9 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('AI')),
-      body: Column(
+    return  Column(
         children: <Widget>[
           Flexible(
             child: ListView.builder(
@@ -85,18 +80,24 @@ class _ChatScreenState extends State<ChatScreen> {
                   if (_isComposing)
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 4.0),
+                      //留下来用于上传图片
                       child: IconButton(
                         icon: Icon(Icons.photo_camera),
                         onPressed: () {},
                       ),
                     ),
+
                   SizedBox(
                     width: 48.0,
-                    child: ElevatedButton(
-                      child: Text('Send'),
-                      onPressed: () => _handleSubmitted(_textController.text),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor,
+                    child: Tooltip(
+                      message: "点击",
+                      preferBelow: false, // 不优先在下方显示
+                      child: IconButton(
+                        icon: Icon(
+                          PhosphorIcons.mouseSimple(PhosphorIconsStyle.regular),
+                          size: 32.0,
+                        ),
+                        onPressed: () => _handleSubmitted(_textController.text),
                       ),
                     ),
                   ),
@@ -105,7 +106,6 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
         ],
-      ),
     );
   }
 }
@@ -160,12 +160,12 @@ class MessageBubble extends StatelessWidget {
                     margin: EdgeInsetsDirectional.only(end: 64.0),
                     padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
+                      color: Colors.pinkAccent.shade100,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Text(
                       message.text,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),

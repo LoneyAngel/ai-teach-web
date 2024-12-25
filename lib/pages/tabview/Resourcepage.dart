@@ -9,5 +9,4 @@ class Resourcepage extends StatelessWidget{
       child: Text("This is your resource"),
     );
   }
-
 }

@@ -9,5 +9,4 @@ class Settingpage extends StatelessWidget{
     );
   }
 
-
 }
