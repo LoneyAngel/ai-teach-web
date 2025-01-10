@@ -42,8 +42,34 @@ class _StartpageState extends State<Startpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightBlue.shade50,
+        backgroundColor: Colors.lightBlue.shade50.withGreen(230),
         title: Text('SHOT MOON'),
+        actions: [
+          //设置原型的头像
+          // IconButton(onPressed: ()=>print("nihao"), icon:),
+          // CircleAvatar(
+          //   backgroundImage: NetworkImage(r"C:\Users\程煜博\Desktop\VCG211492076912.jpg"),
+          //   radius: 20.0, // 设置头像半径
+          //
+          // ),
+
+          //设置复杂的现代化的头像
+          InkWell(
+            onTap: () {
+              // 点击头像时执行的操作
+              print('头像被点击了！');
+            },
+            borderRadius: BorderRadius.circular(100.0), // 圆形边界
+            onHover: (bool value) {
+
+            },
+            child: const CircleAvatar(
+              backgroundImage: AssetImage('picture/head.jpg'),
+              radius: 20.0,
+
+            ),
+          )
+        ],
       ),
 
       drawer: Drawer(//抽屉
@@ -148,7 +174,9 @@ class _StartpageState extends State<Startpage> {
                           ),
 
                           ListTile(
-                            title: Text('AI',textAlign: TextAlign.center),
+                            title: Text('AI',textAlign: TextAlign.center,style: TextStyle(
+
+                            ),),
                             onTap: () {//点击事件
                               _onItemTapped(1);
                             },

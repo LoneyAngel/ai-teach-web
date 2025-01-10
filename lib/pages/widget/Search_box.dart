@@ -31,7 +31,7 @@ class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
       if (response.statusCode == 200) {
         var responseBody = jsonDecode(response.body);
         setState(() {
-          _response = responseBody['data'] ?? 'No response';
+
         });
       } else {
         setState(() {

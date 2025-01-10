@@ -14,12 +14,13 @@ dependencies:
   phosphor_flutter: 2.1.0
   http: ^1.2.2 # 使用最新版本,进行http请求
   path: ^1.9.0 #
-  provider: ^6.0.0
-
+  provider: ^6.0.0 #状态管理
+  flutter_markdown: ^0.6.5  #markdown格式
+  getwidget: ^2.0.4
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  google_fonts: ^6.2.1
+  google_fonts: ^6.2.1    #goodle字体
 
 dev_dependencies:
   flutter_test:
@@ -46,22 +47,22 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/picture/back.jpg
+    - assets/picture/head.jpg
 
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+#   To add custom fonts to your application, add a fonts section here,
+#   in this "flutter" section. Each entry in this list should have a
+#   "family" key with the font family name, and a "fonts" key with a
+#   list giving the asset and other descriptors for the font. For
+#  fonts:
+#   - family: Schyler
+#     fonts:
+#       - asset: fonts/Schyler-Regular.ttf
+#       - asset: fonts/Schyler-Italic.ttf
+#         style: italic
+#   - family: Trajan Pro
+#     fonts:
+#       - asset: fonts/TrajanPro.ttf
+#       - asset: fonts/TrajanPro_Bold.ttf
+#         weight: 700
 

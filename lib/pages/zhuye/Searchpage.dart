@@ -20,7 +20,7 @@ class Searchpage extends StatelessWidget{
             child: Container(
               width: MediaQuery.of(context as BuildContext).size.width * 0.3,
               height: MediaQuery.of(context as BuildContext).size.height * 0.3,
-              child: Image.asset('assets/picture/back.jpg'),
+              child: Image.asset('picture/back.jpg'),
             ),
           ),
           //一些文字和提示类的东西
